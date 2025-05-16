@@ -6,8 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.ucb.recuperatorio.Lista.ListaUI
 import com.ucb.recuperatorio.Registrar.RegistrarRecordatoriosUI
-import com.ucb.recuperatorio.Lista.listaUI
 import com.ucb.recuperatorio.Splash.SplashUI
 
 @Composable
@@ -30,6 +30,12 @@ fun AppNavigation() {
 
         composable(Screen.Registrar.route) {
             RegistrarRecordatoriosUI(navController)
+        }
+
+        composable(Screen.Lista.route) {
+            ListaUI(
+                onBackClick = { navController.popBackStack() }
+            )
         }
     }
 }

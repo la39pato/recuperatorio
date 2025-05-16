@@ -66,5 +66,7 @@ dependencies {
 
     //Capas
     implementation(project(":Usecase"))
-
+    implementation(project(":Data"))
+    implementation(project(":Framework"))
+    implementation(project(":Domain"))
 }
