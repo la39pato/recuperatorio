@@ -1,17 +1,29 @@
 package com.ucb.recuperatorio.Lista
 
-import androidx.lifecycle.ViewModel
-import com.ucb.domain.Recordatorio
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
-import com.ucb.usecase.MostrarRecordatorio
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import androidx.lifecycle.viewModelScope
 
-@HiltViewModel
-class ListaViewModel @Inject constructor(
-    private val mostrarRecordatorio: MostrarRecordatorio
-) : ViewModel() {
-
-    suspend fun obtenerRecordatorios(): List<Recordatorio> {
-        return mostrarRecordatorio()
-    }
+class listaViewModel(
+//    private val obtenerRecordatoriosUseCase: ObtenerRecordatoriosUseCase
+) {
+//    private val _recordatorios = MutableStateFlow<List<RecordatorioUI>>(emptyList())
+//    val recordatorios: StateFlow<List<RecordatorioUI>> = _recordatorios
+//
+//    fun cargarRecordatorios() {
+//        viewModelScope.launch {
+//            val listaDomain = obtenerRecordatoriosUseCase.ejecutar()
+//
+//            // Convertimos a modelo de la UI
+//            val listaUI = listaDomain.map { recordatorio ->
+//                RecordatorioUI(
+//                    nombre = recordatorio.nombre,
+//                    fecha = recordatorio.fecha,
+//                    importancia = recordatorio.importancia
+//                )
+//            }
+//
+//            _recordatorios.value = listaUI
+//        }
+//    }
 }

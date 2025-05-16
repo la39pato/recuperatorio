@@ -64,6 +64,9 @@ dependencies {
     implementation (libs.androidx.hilt.navigation.compose)
     implementation (libs.hilt.android)
 
+    //apariencia
+    implementation (libs.androidx.compose.material3.material3)
+
     //Capas
     implementation(project(":Usecase"))
     implementation(project(":Data"))
